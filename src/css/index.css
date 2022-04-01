@@ -2,7 +2,7 @@ body {
   overflow: hidden;
   height: 100vh;
   background-color: #091833;
-  font-family: "Oxygen", sans-serif;
+  font-family: "Comfortaa", cursive;
   font-weight: 400;
 }
 
@@ -16,10 +16,11 @@ body {
   font-weight: 700;
   font-size: 5vw;
   color: #ce0bb4;
-
+  text-shadow: 0 0 0.6rem #a4069f, 0 0 1rem #ce0bb4, 0 0 0.6rem #a4069f;
+  font-weight: 700;
   position: absolute;
   margin: 0;
-  top: 30%;
+  top: 300px;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
@@ -27,31 +28,39 @@ body {
 
 .neon-sign {
   position: absolute;
-  right: 20px;
+  right: 1rem;
   top: 20px;
   height: 400px;
   width: 100px;
-  border: 3px #ce0bb4 solid;
+  border: 3px #0790dd solid;
   border-radius: 25px;
   padding: 20px;
   background: rgba(3, 3, 13, 0.6);
 
+  /*
   box-shadow: 0 0 0.1vw 0.4vw #fff7f7, 0 0 0.4vw 0.6vw #ce0bb4,
     0 0 4vw 0.4vw #a4069f, inset 0 0 1.5vw 0.4vw #a4069f,
     inset 0 0 0.4vw 0.2vw #ce0bb4, inset 0 0 0.5vw 0.2vw #fff7f7;
+    */
+  /*box-shadow: 0 0 2px 4px #fff7f7, 0 0 4px 6px#0790dd, 0 0 4px 4px #250bce,
+    inset 0 0 2px 4px #250bce, inset 0 0 4px 2px#0790dd,
+    inset 0 0 5px 2px #fff7f7;*/
+  box-shadow: 0 0 0.1vw 0.4vw #fff7f7, 0 0 0.4vw 0.6vw #0790dd,
+    0 0 4vw 0.4vw #250bce, inset 0 0 1.5vw 0.4vw #250bce,
+    inset 0 0 0.4vw 0.2vw #0790dd, inset 0 0 0.5vw 0.2vw #fff7f7;
 }
 
 .sign-bars {
   position: absolute;
   z-index: -1;
-  right: -220px;
+  right: -13rem;
   top: 120px;
   height: 200px;
   width: 200px;
-  border: 3px #ce0bb4 solid;
-  box-shadow: 0 0 0.1vw 0.4vw #fff7f7, 0 0 0.4vw 0.6vw #ce0bb4,
-    0 0 4vw 0.4vw #a4069f, inset 0 0 1.5vw 0.4vw #a4069f,
-    inset 0 0 0.4vw 0.2vw #ce0bb4, inset 0 0 0.5vw 0.2vw #fff7f7;
+  border: none;
+  box-shadow: 0 0 0.1vw 0.4vw #fff7f7, 0 0 0.4vw 0.6vw #0790dd,
+    0 0 4vw 0.4vw #250bce, inset 0 0 1.5vw 0.4vw #250bce,
+    inset 0 0 0.4vw 0.2vw #0790dd, inset 0 0 0.5vw 0.2vw #fff7f7;
 }
 
 .neon-text {
@@ -59,4 +68,48 @@ body {
   font-size: 72px;
   text-align: center;
   text-shadow: 0 0 0.4vw #fff7f7, 0 0 0.6vw #ce0bb4, 0 0 0.4vw #a4069f;
+}
+
+.buttons {
+  position: absolute;
+  margin: 0;
+  top: 420px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+button {
+  height: 60px;
+  min-width: 140px;
+  margin: 4px;
+  background-color: transparent;
+  border: none;
+  display: inline;
+  color: #0790dd;
+  font-size: 3vw;
+  text-shadow: 0 0 0.6rem #250bce, 0 0 1rem #0790dd, 0 0 0.6rem #250bce;
+}
+
+@media screen and (max-width: 800px) {
+  .neon-sign {
+    right: 1rem;
+    top: 20px;
+    height: 200px;
+    width: 50px;
+    border: 3px #0790dd solid;
+    border-radius: 25px;
+    padding: 20px;
+  }
+  .neon-text {
+    font-size: 36px;
+  }
+
+  .sign-bars {
+    right: -6.5rem;
+    top: 60px;
+    height: 100px;
+    width: 100px;
+  }
 }
