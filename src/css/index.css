@@ -12,6 +12,14 @@ body {
   position: relative;
 }
 
+.disable-select {
+  -ms-user-select: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
 #title {
   font-weight: 700;
   font-size: 110px;
@@ -113,6 +121,7 @@ button {
   color: #0790dd;
   font-size: 60px;
   text-shadow: 0 0 0.6rem #250bce, 0 0 1rem #0790dd, 0 0 0.6rem #250bce;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1024px) {

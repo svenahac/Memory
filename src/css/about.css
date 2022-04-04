@@ -12,6 +12,14 @@ body {
   position: relative;
 }
 
+.disable-select {
+  -ms-user-select: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
 h1 {
   font-size: 110px;
   font-weight: 700;
@@ -48,6 +56,7 @@ button {
   font-weight: 700;
   color: #ce0bb4;
   text-shadow: 0 0 0.6rem #a4069f, 0 0 1rem #ce0bb4, 0 0 0.6rem #a4069f;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1024px) {
