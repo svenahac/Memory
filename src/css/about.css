@@ -13,14 +13,14 @@ body {
 }
 
 h1 {
-  font-size: 5vw;
+  font-size: 110px;
   font-weight: 700;
   color: #ce0bb4;
   text-shadow: 0 0 0.6rem #a4069f, 0 0 1rem #ce0bb4, 0 0 0.6rem #a4069f;
 }
 
 p {
-  font-size: 2vw;
+  font-size: 30px;
   color: #0790dd;
   text-shadow: 0 0 0.6rem #250bce, 0 0 1rem #0790dd, 0 0 0.6rem #250bce;
 }
@@ -34,4 +34,31 @@ p {
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
+}
+
+button {
+  font-family: "Comfortaa", cursive;
+  height: 60px;
+  min-width: 140px;
+  margin: 4px;
+  background-color: transparent;
+  border: none;
+  display: inline;
+  font-size: 60px;
+  font-weight: 700;
+  color: #ce0bb4;
+  text-shadow: 0 0 0.6rem #a4069f, 0 0 1rem #ce0bb4, 0 0 0.6rem #a4069f;
+}
+
+@media screen and (max-width: 1024px) {
+  p {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 80px;
+  }
+  button {
+    font-size: 50px;
+  }
 }

@@ -1,0 +1,130 @@
+body {
+  overflow: hidden;
+  height: 100vh;
+  background-color: #091833;
+  font-family: "Comfortaa", cursive;
+  font-weight: 400;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.playing-field {
+  position: absolute;
+  margin: 0;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  width: 700px;
+  height: 670px;
+  border: 3px #0790dd solid;
+  border-radius: 10px;
+  box-shadow: 0 0 0.1vw 0.4vw #fff7f7, 0 0 0.4vw 0.6vw #0790dd,
+    0 0 4vw 0.4vw #250bce, inset 0 0 1.5vw 0.4vw #250bce,
+    inset 0 0 0.4vw 0.2vw #0790dd, inset 0 0 0.5vw 0.2vw #fff7f7;
+
+  --gap: 20px;
+  --num-cols: 5;
+  --row-height: 110px;
+
+  box-sizing: border-box;
+  padding: var(--gap);
+
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), 1fr);
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap);
+}
+
+/*
+.playing-field > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}*/
+
+.piece {
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  border: 3px solid #a4069f;
+  background-color: #ce0bb4;
+  position: relative;
+}
+
+.piece span {
+  position: absolute;
+  font-size: 50px;
+  font-weight: 700;
+  color: #a4069f;
+  margin: 0;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+button {
+  font-family: "Comfortaa", cursive;
+  height: 60px;
+  min-width: 140px;
+  margin: 4px;
+  background-color: transparent;
+  border: none;
+  display: inline;
+  font-weight: 700;
+  color: #0790dd;
+  font-size: 60px;
+  text-shadow: 0 0 0.6rem #250bce, 0 0 1rem #0790dd, 0 0 0.6rem #250bce;
+
+  position: absolute;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 94%;
+}
+
+.timer {
+  font-weight: 700;
+  color: #0790dd;
+  font-size: 60px;
+  text-shadow: 0 0 0.6rem #250bce, 0 0 1rem #0790dd, 0 0 0.6rem #250bce;
+
+  position: absolute;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 6%;
+}
+
+@media screen and (max-width: 1024px) {
+  .playing-field {
+    width: 350px;
+    height: 345px;
+    --gap: 15px;
+    --row-height: 50px;
+  }
+  .piece {
+    width: 45px;
+    height: 45px;
+  }
+
+  .piece span {
+    font-size: 20px;
+  }
+
+  button {
+    top: 75%;
+    font-size: 50px;
+  }
+
+  .timer {
+    top: 25%;
+    font-size: 50px;
+  }
+}

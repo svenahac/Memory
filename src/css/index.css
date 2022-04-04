@@ -14,7 +14,7 @@ body {
 
 #title {
   font-weight: 700;
-  font-size: 5vw;
+  font-size: 110px;
   color: #ce0bb4;
   text-shadow: 0 0 0.6rem #a4069f, 0 0 1rem #ce0bb4, 0 0 0.6rem #a4069f;
   font-weight: 700;
@@ -50,6 +50,24 @@ body {
     inset 0 0 0.4vw 0.2vw #0790dd, inset 0 0 0.5vw 0.2vw #fff7f7;
 }
 
+@keyframes animate {
+  40% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 0.8;
+  }
+  43% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0.3;
+  }
+  46% {
+    opacity: 1;
+  }
+}
+
 .sign-bars {
   position: absolute;
   z-index: -1;
@@ -70,10 +88,14 @@ body {
   text-shadow: 0 0 0.4vw #fff7f7, 0 0 0.6vw #ce0bb4, 0 0 0.4vw #a4069f;
 }
 
+.neon-text span {
+  animation: animate 3s infinite alternate;
+}
+
 .buttons {
   position: absolute;
   margin: 0;
-  top: 420px;
+  top: 440px;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
@@ -81,6 +103,7 @@ body {
 }
 
 button {
+  font-family: "Comfortaa", cursive;
   height: 60px;
   min-width: 140px;
   margin: 4px;
@@ -88,11 +111,11 @@ button {
   border: none;
   display: inline;
   color: #0790dd;
-  font-size: 3vw;
+  font-size: 60px;
   text-shadow: 0 0 0.6rem #250bce, 0 0 1rem #0790dd, 0 0 0.6rem #250bce;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
   .neon-sign {
     right: 1rem;
     top: 20px;
@@ -111,5 +134,12 @@ button {
     top: 60px;
     height: 100px;
     width: 100px;
+  }
+
+  #title {
+    font-size: 80px;
+  }
+  button {
+    font-size: 40px;
   }
 }
