@@ -124,6 +124,11 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  font-size: 63px;
+  transition: 0.2s;
+}
+
 @media screen and (max-width: 1024px) {
   .neon-sign {
     right: 1rem;
