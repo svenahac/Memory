@@ -15,59 +15,68 @@
   <body>
     <div class="container">
       <div class="playing-field">
-        <div class="piece"></div>
-        <div class="piece"><span class="at disable-select">@</span></div>
-        <div class="piece"></div>
-        <div class="piece"></div>
-        <div class="piece"></div>
-        <div class="piece"></div>
-        <div class="piece"></div>
-        <div class="piece"></div>
-        <div class="piece"><span class="ss disable-select">§</span></div>
-        <div class="piece"></div>
-        <div class="piece"></div>
-        <div class="piece"></div>
-        <div class="piece"><span class="at disable-select">@</span></div>
-        <div class="piece"></div>
-        <div class="piece"></div>
-        <div class="piece"></div>
-        <div class="piece"></div>
-        <div class="piece"></div>
-        <div class="piece"></div>
-        <div class="piece"></div>
-        <div class="piece"></div>
-        <div class="piece"><span class="ss disable-select">§</span></div>
-        <div class="piece"></div>
-        <div class="piece"></div>
-        <div class="piece"></div>
-
-        <!--
-        <img src="../images/blank_memory.png" />
-        <img src="../images/at_memory.png" />
-        <img src="../images/blank_memory.png" />
-        <img src="../images/blank_memory.png" />
-        <img src="../images/blank_memory.png" />
-        <img src="../images/blank_memory.png" />
-        <img src="../images/blank_memory.png" />
-        <img src="../images/blank_memory.png" />
-        <img src="../images/ss_memory.png" />
-        <img src="../images/blank_memory.png" />
-        <img src="../images/blank_memory.png" />
-        <img src="../images/blank_memory.png" />
-        <img src="../images/at_memory.png" />
-        <img src="../images/blank_memory.png" />
-        <img src="../images/blank_memory.png" />
-        <img src="../images/blank_memory.png" />
-        <img src="../images/blank_memory.png" />
-        <img src="../images/blank_memory.png" />
-        <img src="../images/blank_memory.png" />
-        <img src="../images/blank_memory.png" />
-        <img src="../images/blank_memory.png" />
-        <img src="../images/ss_memory.png" />
-        <img src="../images/blank_memory.png" />
-        <img src="../images/blank_memory.png" />
-        <img src="../images/blank_memory.png" />
-        -->
+        <div onclick="startCounter()" id="cont1" class="piece">
+          <span onclick="flip(1)" id="piece1" class="c1 disable-select">1</span>
+        </div>
+        <div onclick="startCounter()" id="cont2" class="piece">
+          <span onclick="flip(2)" id="piece2" class="c1 disable-select">1</span>
+        </div>
+        <div onclick="startCounter()" id="cont3" class="piece">
+          <span onclick="flip(3)" id="piece3" class="c2 disable-select">2</span>
+        </div>
+        <div onclick="startCounter()" id="cont4" class="piece">
+          <span onclick="flip(4)" id="piece4" class="c2 disable-select">2</span>
+        </div>
+        <div onclick="startCounter()" id="cont5" class="piece">
+          <span onclick="flip(5)" id="piece5" class="c3 disable-select">3</span>
+        </div>
+        <div onclick="startCounter()" id="cont6" class="piece">
+          <span onclick="flip(6)" id="piece6" class="c3 disable-select">3</span>
+        </div>
+        <div onclick="startCounter()" id="cont7" class="piece">
+          <span onclick="flip(7)" id="piece7" class="c4 disable-select">4</span>
+        </div>
+        <div onclick="startCounter()" id="cont8" class="piece">
+          <span onclick="flip(8)" id="piece8" class="c4 disable-select">4</span>
+        </div>
+        <div onclick="startCounter()" id="cont9" class="piece">
+          <span onclick="flip(9)" id="piece9" class="c5 disable-select">5</span>
+        </div>
+        <div onclick="startCounter()" id="cont10" class="piece">
+          <span onclick="flip(10)" id="piece10" class="c5 disable-select"
+            >5</span
+          >
+        </div>
+        <div onclick="startCounter()" id="cont11" class="piece">
+          <span onclick="flip(11)" id="piece11" class="c6 disable-select"
+            >6</span
+          >
+        </div>
+        <div onclick="startCounter()" id="cont12" class="piece">
+          <span onclick="flip(12)" id="piece12" class="c6 disable-select"
+            >6</span
+          >
+        </div>
+        <div onclick="startCounter()" id="cont13" class="piece">
+          <span onclick="flip(13)" id="piece13" class="c7 disable-select"
+            >7</span
+          >
+        </div>
+        <div onclick="startCounter()" id="cont14" class="piece">
+          <span onclick="flip(14)" id="piece14" class="c7 disable-select"
+            >7</span
+          >
+        </div>
+        <div onclick="startCounter()" id="cont15" class="piece">
+          <span onclick="flip(15)" id="piece15" class="c8 disable-select"
+            >8</span
+          >
+        </div>
+        <div onclick="startCounter()" id="cont16" class="piece">
+          <span onclick="flip(16)" id="piece16" class="c8 disable-select"
+            >8</span
+          >
+        </div>
       </div>
       <button
         type="button"
@@ -77,7 +86,10 @@
         Back
       </button>
 
-      <div class="timer">00:00</div>
+      <div id="min" class="timer">0</div>
+      <div class="timer">:</div>
+      <div id="sec" class="timer sec-ones">0</div>
     </div>
+    <script src="../js/play.js"></script>
   </body>
 </html>

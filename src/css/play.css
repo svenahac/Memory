@@ -37,8 +37,8 @@ body {
     inset 0 0 0.4vw 0.2vw #0790dd, inset 0 0 0.5vw 0.2vw #fff7f7;
 
   --gap: 20px;
-  --num-cols: 5;
-  --row-height: 110px;
+  --num-cols: 4;
+  --row-height: 140px;
 
   box-sizing: border-box;
   padding: var(--gap);
@@ -51,17 +51,10 @@ body {
   justify-items: center;
 }
 
-/*
-.playing-field > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}*/
-
 .piece {
   box-sizing: border-box;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border: 3px solid #a4069f;
   background-color: #ce0bb4;
   position: relative;
@@ -71,12 +64,20 @@ body {
   position: absolute;
   font-size: 50px;
   font-weight: 700;
-  color: #a4069f;
+  color: transparent;
   margin: 0;
   margin-right: -50%;
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
+}
+
+.piece .clicked {
+  color: #a4069f;
+}
+
+.piece .found {
+  color: black;
 }
 
 button {
@@ -118,16 +119,33 @@ button:hover {
   top: 6%;
 }
 
+#min {
+  left: 47%;
+  top: 6.5%;
+}
+
+#sec {
+  top: 6.5%;
+}
+
+.sec-ones {
+  left: 53%;
+}
+
+.container .sec-double {
+  left: 54%;
+}
+
 @media screen and (max-width: 1024px) {
   .playing-field {
     width: 350px;
     height: 345px;
     --gap: 15px;
-    --row-height: 50px;
+    --row-height: 64px;
   }
   .piece {
-    width: 45px;
-    height: 45px;
+    width: 54px;
+    height: 54px;
   }
 
   .piece span {
@@ -142,5 +160,10 @@ button:hover {
   .timer {
     top: 25%;
     font-size: 50px;
+  }
+
+  #min,
+  #sec {
+    top: 25.5%;
   }
 }
