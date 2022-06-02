@@ -21,7 +21,7 @@ body {
   -webkit-touch-callout: none;
 }
 
-.playing-field {
+#playing-field {
   position: absolute;
   margin: 0;
   margin-right: -50%;
@@ -137,7 +137,7 @@ button:hover {
 }
 
 @media screen and (max-width: 1024px) {
-  .playing-field {
+  #playing-field {
     width: 350px;
     height: 345px;
     --gap: 15px;

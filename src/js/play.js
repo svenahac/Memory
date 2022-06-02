@@ -1,4 +1,3 @@
-const pieces = document.querySelectorAll(".disable-select");
 let guessed = 0;
 let counter = 0;
 let minutes = 0;
@@ -19,7 +18,37 @@ function randomize() {
   }
 }
 
+function addPieces() {
+  let pair = 1;
+  for (let i = 1; i <= 16; i++) {
+    createPiece(i, pair);
+    if (i % 2 == 0) {
+      pair++;
+    }
+  }
+}
+
+function createPiece(num, pair) {
+  let playField = document.getElementById("playing-field");
+  let cont = document.createElement("div");
+  let piece = document.createElement("span");
+  cont.id = `cont${num}`;
+  cont.className = "piece";
+  cont.onclick = function () {
+    startCounter();
+  };
+  piece.id = `piece${num}`;
+  piece.className = `c${pair} disable-select`;
+  piece.innerHTML = `${pair}`;
+  piece.onclick = function () {
+    flip(num);
+  };
+  cont.appendChild(piece);
+  playField.appendChild(cont);
+}
+
 function flip(num) {
+  let pieces = document.querySelectorAll(".disable-select");
   let el = document.getElementById("piece" + num);
   el.classList.add("clicked");
   let current = 0;
@@ -60,14 +89,16 @@ function flip(num) {
     current = 0;
   }
   if (guessed === 8) {
-    window.alert("Congrats your time was: " + minutes + ":" + counter);
-    guessed = 0;
-    randomize();
-    stopCounter();
-    document.location.reload();
-    for (let i = 0; i < pieces.length; i++) {
-      pieces[i].classList.remove("found");
-    }
+    setTimeout(() => {
+      window.alert("Congrats your time was: " + minutes + ":" + counter);
+      guessed = 0;
+      randomize();
+      stopCounter();
+      document.location.reload();
+      for (let i = 0; i < pieces.length; i++) {
+        pieces[i].classList.remove("found");
+      }
+    }, 500);
   }
 }
 
@@ -102,4 +133,5 @@ function stopCounter() {
   document.getElementById("min").innerHTML = 0;
 }
 
+addPieces();
 randomize();
