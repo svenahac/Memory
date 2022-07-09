@@ -58,25 +58,34 @@ body {
   border: 3px solid #a4069f;
   background-color: #ce0bb4;
   position: relative;
+  display: flex;
 }
 
 .piece span {
-  position: absolute;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  /* position: absolute; */
   font-size: 50px;
   font-weight: 700;
   color: transparent;
-  margin: 0;
+  /* margin: 0;
   margin-right: -50%;
   transform: translate(-50%, -50%);
   left: 50%;
-  top: 50%;
+  top: 50%; */
 }
 
 .piece .clicked {
+  transition: 1s;
   color: #a4069f;
 }
 
 .piece .found {
+  transition: 1s;
   color: black;
 }
 
@@ -149,6 +158,8 @@ button:hover {
   }
 
   .piece span {
+    width: 54px;
+    height: 54px;
     font-size: 20px;
   }
 

@@ -90,7 +90,9 @@ function flip(num) {
   }
   if (guessed === 8) {
     setTimeout(() => {
-      window.alert("Congrats your time was: " + minutes + ":" + counter);
+      window.alert(
+        "Congrats your time was: " + minutes + ":" + counter + " minutes"
+      );
       guessed = 0;
       randomize();
       stopCounter();
